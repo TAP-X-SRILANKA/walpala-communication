@@ -1,0 +1,219 @@
+:root {
+  --bg: #fbfbfa;
+  --ink: #12181f;
+  --muted: #4b5563;
+  --line: #e7e9ec;
+  --card-bg: #ffffff;
+
+  --accent: #0b6e6d;
+  --accent-strong: #094f4f;
+  --accent-soft: #e4f3f2;
+  --signal: #22b8b3;
+
+  --shadow: 0 24px 48px -24px rgba(18, 24, 31, 0.16), 0 2px 8px -2px rgba(18, 24, 31, 0.05);
+  --radius-card: 26px;
+  --radius-row: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--ink);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(var(--line) 1px, transparent 1px),
+    var(--bg);
+  background-size: 22px 22px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- card ---------- */
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+  padding: 36px 22px 22px;
+}
+
+/* ---------- brand ---------- */
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: pulse 2.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.brand {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.accent-rule {
+  width: 34px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 999px;
+  margin: 14px auto 22px;
+  transform-origin: left center;
+  animation: draw-in 0.7s cubic-bezier(.4,0,.2,1) 0.1s both;
+}
+
+/* ---------- list & rows ---------- */
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li + li {
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 8px;
+  text-decoration: none;
+  color: var(--ink);
+  border-radius: var(--radius-row);
+  transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+a.row:hover,
+a.row:focus-visible {
+  background: var(--accent-soft);
+}
+
+a.row:hover .row-icon,
+a.row:focus-visible .row-icon,
+a.row:hover .row-chevron,
+a.row:focus-visible .row-chevron {
+  color: var(--accent-strong);
+}
+
+a.row:active,
+a.row.is-pressed {
+  transform: scale(0.98);
+  background: var(--accent-soft);
+}
+
+a.row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.row-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: color 0.18s ease;
+}
+
+.row-icon svg { width: 20px; height: 20px; }
+
+.row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.row-value {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  word-break: break-word;
+  color: var(--ink);
+}
+
+.row-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.row-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--line);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+a.row:hover .row-chevron,
+a.row:focus-visible .row-chevron {
+  transform: translateX(2px);
+}
+
+/* static row (fax) — deliberately quieter, no affordance */
+
+.row-static {
+  padding: 15px 8px;
+  cursor: default;
+}
+
+.row-static .row-icon { color: var(--muted); opacity: 0.7; }
+.row-static .row-value { color: var(--muted); font-weight: 700; }
+
+/* ---------- motion ---------- */
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); opacity: 1; }
+  50% { box-shadow: 0 0 0 7px var(--accent-soft); opacity: 0.75; }
+}
+
+@keyframes draw-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot, .accent-rule {
+    animation: none;
+  }
+  .row, a.row:active {
+    transition: none;
+  }
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 360px) {
+  .card { padding: 30px 16px 16px; border-radius: 22px; }
+  .brand { font-size: 22px; }
+  .row-value { font-size: 14.5px; }
+}
