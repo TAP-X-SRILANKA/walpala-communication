@@ -217,3 +217,14 @@ a.row:focus-visible .row-chevron {
   .brand { font-size: 22px; }
   .row-value { font-size: 14.5px; }
 }
+.footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.footer strong {
+    color: #555;
+    letter-spacing: 1px;
+}
