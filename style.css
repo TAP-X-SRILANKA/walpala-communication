@@ -34,7 +34,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ---------- card ---------- */
+
 
 .card {
   width: 100%;
@@ -46,7 +46,7 @@ body {
   padding: 36px 22px 22px;
 }
 
-/* ---------- brand ---------- */
+
 
 .brand-row {
   display: flex;
@@ -85,7 +85,6 @@ body {
   animation: draw-in 0.7s cubic-bezier(.4,0,.2,1) 0.1s both;
 }
 
-/* ---------- list & rows ---------- */
 
 .contact-list {
   list-style: none;
@@ -189,7 +188,6 @@ a.row:focus-visible .row-chevron {
 .row-static .row-icon { color: var(--muted); opacity: 0.7; }
 .row-static .row-value { color: var(--muted); font-weight: 700; }
 
-/* ---------- motion ---------- */
 
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); opacity: 1; }
@@ -210,7 +208,6 @@ a.row:focus-visible .row-chevron {
   }
 }
 
-/* ---------- responsive ---------- */
 
 @media (max-width: 360px) {
   .card { padding: 30px 16px 16px; border-radius: 22px; }
