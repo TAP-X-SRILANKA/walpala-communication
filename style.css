@@ -402,7 +402,7 @@ a.row:focus-visible .row-chevron {
 }
 
 .footer-phone {
-  font-size: clamp(16px, 3vh, 24px);
+  font-size: clamp(11px, 1.6vh, 13px);
   font-weight: 800;
   letter-spacing: 0.5px;
   color: var(--ink);
