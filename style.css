@@ -299,14 +299,13 @@ a.row:focus-visible .row-chevron {
   width: calc(100% - 24px);
   max-width: 460px;
   align-self: center;
-  margin-top: 20px;
+  margin-top: 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   background: var(--card-bg);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-
 .footer-wave {
   display: none;
 }
@@ -316,21 +315,20 @@ a.row:focus-visible .row-chevron {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  padding: clamp(10px, 2.5vh, 20px) clamp(16px, 4vw, 40px)
-    clamp(6px, 1.5vh, 8px);
+  gap: 10px;
+  padding: clamp(8px, 1.5vh, 14px) clamp(12px, 3vw, 24px) clamp(4px, 1vh, 6px);
   width: 100%;
 }
 
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .footer-powered-label {
   margin: 0;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   color: var(--muted);
   text-transform: uppercase;
@@ -344,16 +342,16 @@ a.row:focus-visible .row-chevron {
 }
 
 .footer-tapx-logo {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
   border-radius: 4px;
 }
 
 .footer-copyright {
-  margin: 4px 0 0;
-  padding: 0 20px clamp(6px, 1.5vh, 10px);
-  font-size: 12px;
+  margin: 2px 0 0;
+  padding: 0 20px clamp(4px, 1vh, 6px);
+  font-size: 10px;
   color: var(--muted);
   text-align: center;
 }
@@ -362,12 +360,12 @@ a.row:focus-visible .row-chevron {
   text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
 }
 
 .footer-contact-label {
   margin: 0;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   color: var(--muted);
   text-transform: uppercase;
@@ -386,30 +384,33 @@ a.row:focus-visible .row-chevron {
   align-items: center;
   justify-content: center;
   background: #25d366;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 8px;
+  padding: 3px;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
   transition: opacity 0.18s ease;
+}
+
+.footer-whatsapp svg {
+  width: 16px;
+  height: 16px;
 }
 
 .footer-whatsapp:hover {
   opacity: 0.85;
 }
 
-.footer-whatsapp svg {
-  width: 26px;
-  height: 26px;
-}
-
 .footer-phone {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   color: var(--ink);
 }
 
 .footer-website {
   margin: 0;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
