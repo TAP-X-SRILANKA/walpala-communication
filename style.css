@@ -23,15 +23,17 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 24px 0;
+  justify-content: space-between;
+  padding: clamp(10px, 3vh, 24px) clamp(12px, 4vw, 24px) clamp(10px, 3vh, 24px);
   color: var(--ink);
   font-family:
     "Manrope",
@@ -46,13 +48,14 @@ body {
 
 .card {
   width: 100%;
-  max-width: 380px;
+  max-width: 460px;
   background: var(--card-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow);
-  padding: 36px 22px 22px;
-  margin: auto 0;
+  padding: clamp(18px, 4vh, 36px) clamp(16px, 4vw, 22px) clamp(14px, 3vh, 22px);
+  flex-shrink: 1;
+  overflow: hidden;
 }
 
 .brand-row {
@@ -291,12 +294,15 @@ a.row:focus-visible .row-chevron {
 /* ── Footer ─────────────────────────────────────────── */
 
 .site-footer {
-  width: 100%;
-  align-self: stretch;
-  margin-top: 40px;
-  border-top: 2px solid var(--accent);
+  width: calc(100% - 24px);
+  max-width: 460px;
+  align-self: center;
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
   background: var(--card-bg);
-  box-shadow: 0 -1px 0 var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .footer-wave {
@@ -309,9 +315,9 @@ a.row:focus-visible .row-chevron {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 20px 40px 24px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: clamp(10px, 2.5vh, 20px) clamp(16px, 4vw, 40px)
+    clamp(6px, 1.5vh, 8px);
+  width: 100%;
 }
 
 .footer-left {
@@ -344,7 +350,7 @@ a.row:focus-visible .row-chevron {
 
 .footer-copyright {
   margin: 4px 0 0;
-  padding: 0 20px;
+  padding: 0 20px clamp(6px, 1.5vh, 10px);
   font-size: 12px;
   color: var(--muted);
   text-align: center;
@@ -407,7 +413,7 @@ a.row:focus-visible .row-chevron {
 }
 
 .footer-website a {
-  color: var(--accent);
+  color: #c0001a;
   text-decoration: none;
 }
 
