@@ -380,9 +380,10 @@ a.row:focus-visible .row-chevron {
 @media (max-width: 480px) {
   .footer-content {
     gap: 16px;
-    padding: 20px 40px 24px;
+    padding: 16px 16px 20px;
     max-width: 900px;
     margin: 0 auto;
+    flex-wrap: nowrap;
   }
   .footer-right {
     text-align: left;
