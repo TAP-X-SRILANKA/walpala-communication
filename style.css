@@ -53,10 +53,11 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow);
-  padding: clamp(12px, 3vh, 36px) clamp(14px, 4vw, 22px) clamp(10px, 2vh, 22px);
+  padding: clamp(10px, 2.5vh, 36px) clamp(14px, 4vw, 22px)
+    clamp(8px, 1.5vh, 22px);
   flex-shrink: 1;
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .brand-row {
@@ -110,7 +111,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: clamp(6px, 1.6vh, 15px) 8px;
+  padding: clamp(4px, 1.2vh, 15px) 8px;
   text-decoration: none;
   color: var(--ink);
   border-radius: var(--radius-row);
@@ -442,4 +443,20 @@ a.row:focus-visible .row-chevron {
   .footer-phone {
     font-size: 20px;
   }
+}
+.footer-whatsapp-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-whatsapp-link .footer-phone {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.footer-phone {
+  font-size: clamp(16px, 3vh, 24px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--ink);
 }
