@@ -257,42 +257,6 @@ a.row:focus-visible .row-chevron {
   }
 }
 
-/* ── Save Contact ────────────────────────────────────── */
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.save-contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 12px;
-  margin: 0 8px 8px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 999px;
-  text-decoration: none;
-  align-self: flex-start;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease;
-}
-
-.save-contact-btn svg {
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
-}
-
-.save-contact-btn:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
 /* ── Footer ─────────────────────────────────────────── */
 
 .site-footer {
@@ -306,10 +270,6 @@ a.row:focus-visible .row-chevron {
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-.footer-wave {
-  display: none;
-}
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -401,13 +361,6 @@ a.row:focus-visible .row-chevron {
   opacity: 0.85;
 }
 
-.footer-phone {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  color: var(--ink);
-}
-
 .footer-website {
   margin: 0;
   font-size: 11px;
@@ -426,10 +379,6 @@ a.row:focus-visible .row-chevron {
 
 @media (max-width: 480px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 16px;
     padding: 20px 40px 24px;
     max-width: 900px;
@@ -440,9 +389,6 @@ a.row:focus-visible .row-chevron {
   }
   .footer-contact-row {
     justify-content: flex-start;
-  }
-  .footer-phone {
-    font-size: 20px;
   }
 }
 .footer-whatsapp-link {
