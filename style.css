@@ -395,6 +395,9 @@ a.row:focus-visible .row-chevron {
 .footer-whatsapp-link {
   text-decoration: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .footer-whatsapp-link .footer-phone {
